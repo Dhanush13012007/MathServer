@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>mileage</title>
+        <style>
+            body {
+            background-color: greenyellow;
+        }
+
+        
+          .edge {
+           width: 1440px;
+           margin-left: auto;
+           margin-right: auto;
+           padding-top: 250px;
+           padding-left: 300px;
+        }
+         .box {
+        display:block;
+        border: Thick dashed purple;
+        width: 500px;
+        min-height: 300px;
+        font-size: 20px;
+        background-color:blueviolet;
+       }
+       .forms{
+       text-align: center;
+       margin-top: 7px;
+    margin-bottom: 6px;
+       }
+      h1
+    {
+       color:red;
+       text-align: center;
+       padding-top: 20px;
+   }
+        </style>
+       
+      
+    </head>
+    <body>
+        <div class="edge">
+        <div class="box">
+           
+            <h1>Fuel Efficiency Calculator</h1>
+            <h2 align="center">M.Dhanush(25009955)</h2>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <div class="forms">
+            Distance(km):
+            <input type="number" name="distance" value="{{km}}"></input>km<br>
+            </div>
+            <div class="forms">
+            Fuel consumed(litres):
+            <input type="number" name="fuel" value="{{litre}}"></input>l<br>
+            </div>
+            <div class="forms">
+
+            <input type="submit" value="calculate"></input>><br>
+            </div>
+            <div class="forms">
+
+            mileage:
+            <input type="number" name="mileage" value="{{mileage}}"></input>km/l
+            </div>
+
+        </form>
+        </div>
+    </div>
+
+    </body>
+</html>
